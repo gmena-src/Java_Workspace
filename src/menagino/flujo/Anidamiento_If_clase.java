@@ -9,12 +9,9 @@ public class Anidamiento_If_clase {
 				
 		int edad = Integer.parseInt(JOptionPane.showInputDialog("¿Que edad tienes?"));
 		
-		boolean mayor_edad=false;
+		boolean mayor_edad=(edad>=18);
 		
-		if(edad>=18) {
-			mayor_edad=true;
-		}
-		
+	
 		if (mayor_edad){//no es necesario dictaminarla como false, cuando aparece de esta manera si cumple con la condicion entrara satisfactoriamente al condicional
 			
 			JOptionPane.showMessageDialog(null, "Eres mayor de edad");

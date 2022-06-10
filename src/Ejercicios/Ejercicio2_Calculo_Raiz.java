@@ -1,3 +1,4 @@
+package Ejercicios;
 
 public class Ejercicio2_Calculo_Raiz {
 

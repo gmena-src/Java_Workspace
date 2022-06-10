@@ -1,13 +1,14 @@
+package Ejercicios;
 
 public class Ejercicio3_Calculo_Potencia {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int base, exponente;
+		double base, exponente;
 		
-		base = 5;
-		exponente = 12;
+		base = 1.75;
+		exponente = 1.75;
 		
 		int resultado =(int)Math.pow(base, exponente);//Casting double to int
 

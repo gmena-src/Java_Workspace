@@ -1,17 +1,18 @@
 package menagino.flujo;
 
+import java.awt.Component;
+
 import javax.swing.JOptionPane;
 
 public class Anidamiento_If_clase {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-				
+		
 		int edad = Integer.parseInt(JOptionPane.showInputDialog("¿Que edad tienes?"));
 		
 		boolean mayor_edad=(edad>=18);
-		
-	
+			
 		if (mayor_edad){//no es necesario dictaminarla como false, cuando aparece de esta manera si cumple con la condicion entrara satisfactoriamente al condicional
 			
 			JOptionPane.showMessageDialog(null, "Eres mayor de edad");
@@ -25,6 +26,8 @@ public class Anidamiento_If_clase {
 		}else JOptionPane.showMessageDialog(null, "Lo siento los menores de edad no pueden conducir");
 								
 	}
+
+	
 
 }
 

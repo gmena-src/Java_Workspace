@@ -13,11 +13,16 @@ public class UsoCuentas {
 		System.out.println(cuenta2.getDatos());
 		System.out.println(cuenta3.getDatos());
 		
-		cuenta1.setTransferencia(cuenta1, cuenta2, 200);
+		CuentaCorriente.setTransferencia(cuenta1, cuenta2, 200);
 		System.out.println("Saldo cuenta 1 "+cuenta1.getSaldo());
 		
-		CuentaCorriente c4=new CuentaCorriente("", 0); 
+		
+		CuentaCorriente c4=new CuentaCorriente("pepe", 10000); 
 		System.out.println(c4.getDatos());
+		c4.setReintegros(150);
+		System.out.println(c4.getSaldo());
+		c4.setIngreso(2200);
+		System.out.println(c4.getSaldo());
 		
 	}
 

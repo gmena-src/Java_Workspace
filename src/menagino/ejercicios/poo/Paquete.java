@@ -50,8 +50,8 @@ public class Paquete {
 					+"Peso: "+peso+"\n"+
 					"Prioridad: "+prioridad;
 	    }
-	    public static String getCantidadPaquetes(Sucursal s1) {
-	    	return "La cantidad de paquetes en la Sucursal N° "+s1.getNumSuc()+ " es "+cantidad+" paquetes.";
+	    public static String getCantidadPaquetes(Sucursal numSucursal) {
+	    	return "La cantidad de paquetes en la Sucursal N° "+numSucursal.getNumSuc()+ " es "+cantidad+" paquetes.";
 	    }
 	    
 }

@@ -14,8 +14,10 @@ public class UsoCuentas {
 		System.out.println(cuenta3.getDatos());
 		
 		CuentaCorriente.setTransferencia(cuenta1, cuenta2, 200);
+		CuentaCorriente.setTransferencia(cuenta3, cuenta2, 500);
 		System.out.println("Saldo cuenta 1 "+cuenta1.getSaldo());
-		
+		System.out.println(cuenta3.getSaldo());
+		System.out.println(cuenta2.getSaldo());
 		
 		CuentaCorriente c4=new CuentaCorriente("pepe", 10000); 
 		System.out.println(c4.getDatos());

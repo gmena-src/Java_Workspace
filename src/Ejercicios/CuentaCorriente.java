@@ -21,7 +21,7 @@ public class CuentaCorriente {
 			System.out.println("Imposible crear una cuenta");
 		}else {
 			Random rdn=new Random();				//creamos un objeto de la clase random para asignar a "nombreCuenta"
-			nombreCuenta=Math.abs(rdn.nextLong());	//Math.abs devuelve un numero absoluto(sin decimales ni negativos)
+			numeroCuenta=Math.abs(rdn.nextLong());	//Math.abs devuelve un numero absoluto(sin decimales ni negativos)
 		}										 	//Se puede usar un casting a entero o Math.round por ejemplo
 		 
 	}
@@ -49,11 +49,11 @@ public class CuentaCorriente {
 	}
 	public String getDatos() {
 		return "Titular: "+nombreTitular+"\n"+
-				"N° de cuenta: "+nombreCuenta+"\n"+
+				"Nï¿½ de cuenta: "+numeroCuenta+"\n"+
 				"Saldo: "+saldo;
 	}
 	//Propiedades, encapsulamiento (private)
 	private double saldo;
 	private String nombreTitular;
-	private long nombreCuenta;
+	private long numeroCuenta;
 }

@@ -3,7 +3,7 @@ package menagino.arrays;
 public class Ejemplo_Arrays {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		/*int [] valores= new int[5];
 		

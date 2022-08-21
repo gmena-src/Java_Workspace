@@ -2,7 +2,6 @@
 public class DeclaracionConstantes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		final double CONVERSION_EURO = 45.5; //Al declarar una constante 
 		
@@ -30,13 +29,13 @@ public class DeclaracionConstantes {
 	// != : Distinto que
 	// == : Igual que
 	// && : "Y" Logico
-	// || : "Ó" Logico
+	// || : "O" Logico
 	
 	//INCREMENTO O DECREMENTO
 	// ++ : Incremento
 	// -- : Decremento
-	// +=n° : Incremento segun el valor asignado
-	// -=m° : Decremento segun el valor asignado
+	// +=nï¿½ : Incremento segun el valor asignado
+	// -=mï¿½ : Decremento segun el valor asignado
 	
 	//CONCATENAR
 	// + : Depende de que caracteres, valores, o variables numericos desees concatenar

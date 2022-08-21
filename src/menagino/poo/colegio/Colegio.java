@@ -1,55 +1,30 @@
 package menagino.poo.colegio;
 
 public class Colegio {
+	
 	private String nameColegio;
 	private int capacity;
-	private String namesStudent[];
-	private double studentsQualf[];
-	private String nameStudent;
-	private double studentQualf;
-	private int id;
+	private Alumno[] stds;
+	private Alumno[] qlfc;
+	private int index;
+	private int indexq;
 
 	public Colegio(String namCol, int cap) {
-
+		stds = new Alumno[cap];
+		qlfc = new Alumno[cap];
 		nameColegio = namCol;
 		capacity = cap;
-		int i=cap;
-		//this.namesStudent[i]=new namesStudent[i];
 
 	}
 
-	public void setNuevoAlumno(String name, double qualif) {
-		//Necesito agregar alumnos y sus notas, posible solucion : ArrayList????
-		if (id < this.capacity) {
+	public void addStudent(String student, double qlfy) {
+		
+		String name = student;
+		double qlfs = qlfy;
 
-			int i = this.capacity;
-			String[] namesStudent = new String[i];
-			double[] studentsQualf = new double[i];
-			
-			
-			System.out.println(i);
-			System.out.println("nombre a agregar "+name+" y nota "+qualif);
-			System.out.println("Creando array de nombres y notas");
-			
-			namesStudent[i]=name;
-			studentsQualf[i]=qualif;
-			
-			
-			//String [] array_de_string= {"gino", "pepe", "juan", "roberto", "juanito"};
-			
-			System.out.println("Array completado");
-			
-			//for (i=0;i<namesStudent[i].length();i++) {
-			//	System.out.println("Casii");
-			//}
-			id++;
-		}
-
-	}
-
-	public void getDatoAlumno() {
-		System.out.println("Colegio: " + nameColegio + "\n" + "Nombre: " + nameStudent + "\n" + "Nota: " + studentQualf
-				+ "\n" + "ID Escolar: " + id + "\n");
+		Alumno a1 = new Alumno(name, qlfs);
+		stds[index++] = a1;
+		qlfc[indexq++] = a1;
 	}
 
 	public void getDatosColegio() {
@@ -57,9 +32,32 @@ public class Colegio {
 
 	}
 
-	public void getNotaAlumno() {
-		//Desarrollar un buscador que devuelva un alumno especifico y su nota
-		//System.out.println("Alumno: "+namesStudent[i]+"\n"+"Nota: "+studentsQualf[i]);
+	public void showAllStudent() {
+		System.out.println("Lista Alumnos del Colegio: "+this.nameColegio+"\n");
+		for (int i = 0; i < stds.length; i++) {
+
+			if (stds != null) {// solo entrara sino esta vacio
+				System.out.println(stds[i].getName() + "\n" + stds[i].getQualification()+"\n");
+			} 
+		}
 	}
-	
+
+	public Alumno findStudentByName(String name) {
+		
+		Alumno match = null;// variable aux para guardar el nombre Buscado en el array stds[];
+
+		for (int i = 0; i < stds.length; i++) {
+
+			if (stds[i] != null) {
+
+				if (stds[i].getName() == name) {// probar con .equals(name),
+					match = stds[i];
+
+					System.out.println("Datos Alumno buscado: "+"\n"+"\n"+match);
+				}
+			}
+		}
+		return match;
+	}
+
 }

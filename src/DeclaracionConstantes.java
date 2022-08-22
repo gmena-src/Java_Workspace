@@ -13,7 +13,7 @@ public class DeclaracionConstantes {
 	}
 	
 }
-
+//Java Comments
 //OPERADORES ARITMETICOS
 
 	// + Suma

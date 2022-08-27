@@ -6,11 +6,15 @@ public class Alumno {
 	private double qualification;
 	public static int id;
 	
-	//Metodos
+	//Constructor
 	public Alumno (String name, double qlf) {
 		this.name=name;
 		this.qualification=qlf;
-		this.id++;
+		id++;
+	}
+	public Alumno () {//metodo alumno vacio, para limpiar posiciones de array.
+		this.name=" ";
+		this.qualification=' ';
 	}
 	public String getName() {
 		return this.name;
@@ -19,8 +23,9 @@ public class Alumno {
 		return this.qualification;
 	}
 	@Override
-	public String toString() {
+	public String toString() {//sobre esribiendo toString para mostrar datos.
 		return "Nombre: "+name+"\n"+"Calificacion: "+qualification+"\n"+"ID: "+id+"\n";
 	}
+	
 
 }

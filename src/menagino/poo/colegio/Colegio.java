@@ -54,58 +54,41 @@ public class Colegio {
 				}
 			}
 		}
-
 	}
 
 	public void modifyQualify(String name, double nota) {
 
-	
-		
-	for (int i = 0; i < stds.length; i++) {
-			
-			if(nota!=stds[i].getQualification()) {
+		for (int i = 0; i < stds.length; i++) {
 				
-				stds[i]=nota;
+				if(nota!=stds[i].getQualification()) {
+					
+					//working ...
+					
 				
-			
+			}
 		}
 	}
 
-	
-
-	}
-
 	public void expelStudent(String name) {
-		// Llamo al metodo Alumno que retorna "vacio" para limpiar un valor dentro de un
-		// array
-		Alumno expulsado = new Alumno();
+		
+		Alumno[] newstds=null;
 
-		for (int i = 0; i < stds.length; i++) {
+		
+		for (int i = 0; i < stds.length-1; i++) {
 
-			// Chequeo para no aceptar valores null
 			if (stds[i] != null) {
 
 				if (stds[i].getName() == name) {
-					// Para limpiar un elemento primero duplico su valor
-					stds[i] = stds[i + 1];
-
-					// For -anidado lee y compara posicion 0/n+, en array Students("stds") y
-					// Qualify("qlfc") para encontrar duplicados
-
-				}
-			}
-			for (int z = 0; z < stds.length; z++) {
-
-				for (int k = 0; k < stds.length - 1; k++) {
-
-					if (z != k) {// recorre 1/n posiciones para buscar el repetido
-
-						if (stds[z] == stds[k]) {
-
-							stds[k] = expulsado;
-
-						}
+					
+					newstds = new Alumno[stds.length-1];
+					
+					for(int index=0; index < i; index++) {
+						newstds[index] = stds[index];
 					}
+					for (int j = i; j < stds.length - 1;j++) {
+						newstds[j] = stds[j+1];
+					}
+					break;
 				}
 			}
 		}

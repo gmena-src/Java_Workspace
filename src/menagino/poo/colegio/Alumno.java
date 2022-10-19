@@ -10,9 +10,9 @@ public class Alumno {
 	public Alumno (String name, double qlf) {
 		this.name=name;
 		this.qualification=qlf;
-		id++;
+		
 	}
-	public Alumno () {//metodo alumno vacio, para limpiar posiciones de array.
+	public Alumno () {
 		this.name=" ";
 		this.qualification=' ';
 	}
@@ -24,7 +24,7 @@ public class Alumno {
 	}
 	@Override
 	public String toString() {//sobre esribiendo toString para mostrar datos.
-		return "Nombre: "+name+"\n"+"Calificacion: "+qualification+"\n"+"ID: "+id+"\n";
+		return "Nombre: "+name+"\n"+"Calificacion: "+qualification+"\n"+"ID: "+id+++"\n";
 	}
 	
 

@@ -20,21 +20,28 @@ public class Colegio {
 		double qlfs = qlfy;
 		// LLamo al construcctor Alumno
 		Alumno a1 = new Alumno(name, qlfs);
-		// Almaceno en el Array de clase los datos
-		stds[index++] = a1;
+		// Solo agregara mas alumnos si la capacidad no es excedida.
+		if (index < capacity) {
+			stds[index++] = a1;
+		} else {
+			System.out.println("No es posible agregar a " + student + " estamos sin cupos.");
+		}
+		
 
 	}
 
 	public void showAllStudent() {
-
+		
 		System.out.println("Lista Alumnos del Colegio: " + this.nameColegio + "\n");
 
 		for (int i = 0; i < stds.length; i++) {
-
+			
 			if (stds != null) {// solo entrara sino esta vacio
 				System.out.println(stds[i]);
+				
+				
 			}
-		}
+		}		
 	}
 
 	public void findStudentByName(String name) {
@@ -56,37 +63,25 @@ public class Colegio {
 		}
 	}
 
-	public void modifyQualify(String name, double nota) {
-
-		for (int i = 0; i < stds.length; i++) {
-				
-				if(nota!=stds[i].getQualification()) {
-					
-					//working ...
-					
-				
-			}
-		}
-	}
-
 	public void expelStudent(String name) {
+
+		Alumno[] arrAux = new Alumno[this.capacity];// array aux
 		
-		Alumno[] newstds=null;
+		for (int i = 0; i < stds.length; i++) {// recorre lista
 
-		
-		for (int i = 0; i < stds.length-1; i++) {
+			if (stds[i] != null) {// chekea posiciones vacias
 
-			if (stds[i] != null) {
+				if (stds[i].getName() == name) {// nombre del alumno posicion "i".
 
-				if (stds[i].getName() == name) {
-					
-					newstds = new Alumno[stds.length-1];
-					
-					for(int index=0; index < i; index++) {
-						newstds[index] = stds[index];
+					System.out.println("ALUMNO EXPULSADO: " + name + "\n");
+
+					for (int j = 0; j < i; j++) {
+
+						arrAux[j] = stds[i];
+
 					}
-					for (int j = i; j < stds.length - 1;j++) {
-						newstds[j] = stds[j+1];
+					for (int z = 0; z < stds.length; z++) {
+						stds[i] = arrAux[z];
 					}
 					break;
 				}
@@ -94,9 +89,25 @@ public class Colegio {
 		}
 	}
 
+	public void modifyQualify(String name, double nota) {
+
+		String equalName = name;
+		double updateNota = nota;
+
+		Alumno updateNotaAlumno = new Alumno(equalName, updateNota);
+
+		for (int i = 0; i < stds.length; i++) {
+
+			if (equalName == stds[i].getName() && updateNota != stds[i].getQualification()) {
+
+				stds[i] = updateNotaAlumno;
+			}
+		}
+	}
+
 	public void getDatosColegio() {
 
-		System.out.println("Nombre Colegio: " + nameColegio + "\n" + "Capacidad: " + capacity + "\n");
+		System.out.println("Nombre Colegio: " + nameColegio + "\n" + "Capacidad: " + capacity + "\n" + "Cupos restantes: " + (capacity-Alumno.id)+"\n");
 
 	}
 }

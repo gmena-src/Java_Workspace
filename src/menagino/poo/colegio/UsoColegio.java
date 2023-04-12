@@ -6,7 +6,15 @@ public class UsoColegio {
 
 	public static void main(String[] args) {
 	
-
+		Colegio c1 = new Colegio("San Juan",5);
+		
+		c1.addStudent("Gino",10);
+		c1.addStudent("juanito", 8);
+		c1.addStudent("juan", 8);
+		c1.addStudent("juan", 8);
+		c1.showAllStudent();
+		
+		
 		
 				
 	}

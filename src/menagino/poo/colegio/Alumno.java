@@ -24,7 +24,7 @@ public class Alumno {
 	}
 	@Override
 	public String toString() {//sobre esribiendo toString para mostrar datos.
-		return "Nombre: "+name+"\n"+"Calificacion: "+qualification+"\n"+"ID: "+id+++"\n";
+		return "Nombre: "+name+"\n"+"Calificacion: "+qualification+"\n"+"ID: "+ id++ +"\n";
 	}
 	
 

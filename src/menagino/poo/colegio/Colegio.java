@@ -4,6 +4,7 @@ public class Colegio {
 
 	private String nameColegio;
 	private int capacity;
+	private int cupos;
 	private Alumno[] stds;
 	private int index;
 
@@ -11,6 +12,7 @@ public class Colegio {
 		capacity = cap;
 		stds = new Alumno[capacity];
 		nameColegio = namCol;
+		this.cupos=capacity-cupos;
 
 	}
 
@@ -18,11 +20,14 @@ public class Colegio {
 		// Atraves de la Clase colegio paso por parametro los datos del nuevo estudiante
 		String name = student;
 		double qlfs = qlfy;
+		int cupos_restantes=0;
+		
 		// LLamo al construcctor Alumno
 		Alumno a1 = new Alumno(name, qlfs);
 		// Solo agregara mas alumnos si la capacidad no es excedida.
 		if (index < capacity) {
 			stds[index++] = a1;
+			cupos--;
 		} else {
 			System.out.println("No es posible agregar a " + student + " estamos sin cupos.");
 		}
@@ -33,16 +38,18 @@ public class Colegio {
 	public void showAllStudent() {
 		
 		System.out.println("Lista Alumnos del Colegio: " + this.nameColegio + "\n");
-
-		for (int i = 0; i < stds.length; i++) {
+		
+		for (int i = 0; i < stds.length; i++) 
 			
-			if (stds != null) {// solo entrara sino esta vacio
+			if (stds[i] != null) {// solo entrara sino esta vacio
+				
 				System.out.println(stds[i]);
 				
 				
 			}
+		
 		}		
-	}
+	
 
 	public void findStudentByName(String name) {
 
@@ -107,7 +114,7 @@ public class Colegio {
 
 	public void getDatosColegio() {
 
-		System.out.println("Nombre Colegio: " + nameColegio + "\n" + "Capacidad: " + capacity + "\n" + "Cupos restantes: " + (capacity-Alumno.id)+"\n");
+		System.out.println("Nombre Colegio: " + nameColegio + "\n" + "Capacidad: " + capacity + "\n" + "Cupos restantes: " + cupos +"\n");
 
 	}
 }

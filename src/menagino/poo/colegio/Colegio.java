@@ -41,26 +41,15 @@ public class Colegio {
 		
 		for (int i = 0; i < stds.length; i++) 
 			
-<<<<<<< HEAD
+
 			if (stds[i] != null) {// solo entrara sino esta vacio
 				
 				System.out.println(stds[i]);
-				
-=======
-			if (stds != null) {// Solo el entra si el array no esta vacio
->>>>>>> e5d5f6b919d4827c03d52d7a14764580b37a1cfb
-				
-				if(stds[i] != null) System.out.println(stds[i]); //Si la posicion != "null" imprime el contenido, 
-				else System.out.println(" ");// Sino imprime un string vacio, para evitar que imprima "null".
+
 			}
-<<<<<<< HEAD
-		
+
 		}		
-	
-=======
-		}
-	}
->>>>>>> e5d5f6b919d4827c03d52d7a14764580b37a1cfb
+
 
 	public void findStudentByName(String name) {
 
